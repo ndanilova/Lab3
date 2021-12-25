@@ -14,8 +14,7 @@ public class JetSneakers extends Gear {
             Cord cord = shorty.getCord();
             shorty.setCord(cord.getX(), cord.getY(), timeOfUse);
             System.out.printf("Can you hear this sound? That's because %s used jet sneakers and flew for %d meters!\n", shorty.getName(), timeOfUse);
-        }
-        else System.out.printf("%s can't use jet sneakers until he has weight\n", shorty.getName());
+        } else System.out.printf("%s can't use jet sneakers until he has weight\n", shorty.getName());
 
     }
 

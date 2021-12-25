@@ -8,8 +8,8 @@ public class Cord {
     private int z = 1;
 
     public Cord() {
-        x = (int)(Math.random()*10);
-        y = (int)(Math.random()*10);
+        x = (int) (Math.random() * 10);
+        y = (int) (Math.random() * 10);
     }
 
     public void setX(int x) {

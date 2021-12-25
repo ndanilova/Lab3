@@ -12,7 +12,7 @@ public class WeightLessNess extends Gear {
         shorty.setWeight(0);
     }
 
-    public void deactivate(Shorty shorty){
+    public void deactivate(Shorty shorty) {
         shorty.setWeight(shorty.getActuallWeight());
     }
 

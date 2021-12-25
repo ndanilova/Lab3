@@ -5,10 +5,13 @@ import people.Shorty;
 import java.util.Objects;
 
 public abstract class Gear {
-    protected  boolean isAttach;
+    protected boolean isAttach;
+
     abstract public void useGear(Shorty shorty, int timeOfUse);
+
     abstract void attach();
-    public boolean checkAttach(){
+
+    public boolean checkAttach() {
         return isAttach;
     }
 

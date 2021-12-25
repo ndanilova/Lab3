@@ -5,8 +5,6 @@ import specificActios.ClapAble;
 import specificActios.Cryable;
 import specificActios.Shoutable;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Shorty extends HumanLike implements ClapAble, Cryable, Shoutable {
@@ -15,28 +13,33 @@ public class Shorty extends HumanLike implements ClapAble, Cryable, Shoutable {
     public IceChop iceChop = new IceChop();
     public JetSneakers jetSneakers = new JetSneakers();
     public WeightLessNess weightLessNess = new WeightLessNess();
-    Shorty(String name, int weight){
+
+    Shorty(String name, int weight) {
         super(name, weight);
     }
-    public void doGear(Gear gear, Shorty shorty, int t){
+
+    public void doGear(Gear gear, Shorty shorty, int t) {
         gear.useGear(shorty, t);
     }
-    public void doGear(Gear gear, Shorty shorty){
+
+    public void doGear(Gear gear, Shorty shorty) {
         gear.useGear(shorty, 5);
     }
-    public void doGear(Gear gear, int t, Shorty... shortyes){
+
+    public void doGear(Gear gear, int t, Shorty... shortyes) {
         for (Shorty shorty : shortyes)
-        gear.useGear(shorty, t);
+            gear.useGear(shorty, t);
     }
-    public void doGear(Gear gear, Shorty... shortyes){
+
+    public void doGear(Gear gear, Shorty... shortyes) {
         for (Shorty shorty : shortyes)
-        gear.useGear(shorty, 5);
+            gear.useGear(shorty, 5);
     }
-    public boolean everythingReady(){
-        if (alpenShtock.checkAttach() && geoHammer.checkAttach() && iceChop.checkAttach() && jetSneakers.checkAttach() && weightLessNess.checkAttach())
-            return true;
-        else return false;
+
+    public boolean everythingReady() {
+        return alpenShtock.checkAttach() && geoHammer.checkAttach() && iceChop.checkAttach() && jetSneakers.checkAttach() && weightLessNess.checkAttach();
     }
+
     @Override
     public void clap(String name) {
         System.out.printf("%s claps with respect\n", name);
@@ -44,21 +47,24 @@ public class Shorty extends HumanLike implements ClapAble, Cryable, Shoutable {
 
     @Override
     public void cry(String name) {
-        System.out.printf("%s is crying miserably\n", name);;
+        System.out.printf("%s is crying miserably\n", name);
     }
 
     @Override
     public void shout(String name) {
-        System.out.printf("%s can't stop shouting\n", name);;
+        System.out.printf("%s can't stop shouting\n", name);
     }
+
     public static void shout(String... names) {
-        for (String name : names ) System.out.printf("%s can't stop shouting\n", name);
+        for (String name : names) System.out.printf("%s can't stop shouting\n", name);
     }
+
     public static void cry(String... names) {
-        for (String name : names ) System.out.printf("%s is crying miserably\n", name);
+        for (String name : names) System.out.printf("%s is crying miserably\n", name);
     }
+
     public static void clap(String... names) {
-        for (String name : names ) System.out.printf("%s claps with respect\n", name);
+        for (String name : names) System.out.printf("%s claps with respect\n", name);
     }
 
     @Override

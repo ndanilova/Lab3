@@ -9,7 +9,7 @@ public class GeoHammer extends Gear {
 
     @Override
     public void useGear(Shorty shorty, int timeOfUse) {
-        Ore result = searchForOre(shorty, timeOfUse);
+        Ore result = searchForOre(timeOfUse);
         System.out.printf("%s had taken geologic hammer and got %s\n", shorty.getName(), result);
     }
 
@@ -18,7 +18,7 @@ public class GeoHammer extends Gear {
         isAttach = true;
     }
 
-    private Ore searchForOre(Shorty shorty, int t) {
+    private Ore searchForOre(int t) {
         if (Math.random() <= 0.3 * t * 0.1) return Ore.GOLD;
         else if (Math.random() <= 0.4 * t * 0.1) return Ore.LEAD;
         else if (Math.random() <= 0.5 * t * 0.1) return Ore.IRON;

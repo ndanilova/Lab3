@@ -48,6 +48,7 @@ public class SleepWalker extends HumanLike implements ClapAble, Cryable, Shoutab
             System.out.printf("%s is throwing it's hat\n", name);
 
     }
+
     public static void jump(String... names) {
         for (String name : names)
             System.out.printf("%s is jumping crazily\n", name);
