@@ -1,16 +1,17 @@
+import gear.*;
 import people.*;
 
 public class Main {
     public static void main(String[] args) {
-        AllKnower allKnower = new AllKnower("Znaika", 47);
-        Donut donut = new Donut("Ponchick", 8);
-        Chamomile chamomile = new Chamomile("Romashka", 22);
-        DontKnower dontKnower = new DontKnower("Neznaika", 40);
+        AllKnower allKnower = new AllKnower("Znaika", 47, new GeoHammer(), new AlpenShtock(), new IceChop(), new JetSneakers(), new WeightLessNess());
+        Donut donut = new Donut("Ponchick", 8, new GeoHammer(), new AlpenShtock(), new IceChop(), new JetSneakers(), new WeightLessNess());
+        Chamomile chamomile = new Chamomile("Romashka", 22, new GeoHammer(), new AlpenShtock(), new IceChop(), new JetSneakers(), new WeightLessNess());
+        DontKnower dontKnower = new DontKnower("Neznaika", 40, new GeoHammer(), new AlpenShtock(), new IceChop(), new JetSneakers(), new WeightLessNess());
         if (donut.everythingReady() && allKnower.everythingReady() && chamomile.everythingReady() && dontKnower.everythingReady()) {
             System.out.println("everyone is ready!");
             HumanLike.standInLine(allKnower, donut, chamomile, dontKnower);
             allKnower.doGear(allKnower.weightLessNess, allKnower, donut, chamomile, dontKnower);
-            allKnower.doGear(allKnower.jetSneakers, 100, allKnower, donut, chamomile, dontKnower);
+            allKnower.doGear(allKnower.jetSneakers, 104, allKnower, donut, chamomile, dontKnower);
         }
         SleepWalker sleepWalker1 = new SleepWalker("Charlie", 8);
         SleepWalker sleepWalker2 = new SleepWalker("Genry", 90);

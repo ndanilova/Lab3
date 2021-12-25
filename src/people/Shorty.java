@@ -8,22 +8,19 @@ import specificActios.Shoutable;
 import java.util.Objects;
 
 public class Shorty extends HumanLike implements ClapAble, Cryable, Shoutable {
-    public GeoHammer geoHammer = new GeoHammer();
-    public AlpenShtock alpenShtock = new AlpenShtock();
-    public IceChop iceChop = new IceChop();
-    public JetSneakers jetSneakers = new JetSneakers();
-    public WeightLessNess weightLessNess = new WeightLessNess();
+    public GeoHammer geoHammer;
+    public AlpenShtock alpenShtock;
+    public IceChop iceChop;
+    public JetSneakers jetSneakers;
+    public WeightLessNess weightLessNess;
 
-    Shorty(String name, int weight) {
+    Shorty(String name, int weight, GeoHammer geoHammer, AlpenShtock alpenShtock, IceChop iceChop, JetSneakers jetSneakers, WeightLessNess weightLessNess) {
         super(name, weight);
-    }
-
-    public void doGear(Gear gear, Shorty shorty, int t) {
-        gear.useGear(shorty, t);
-    }
-
-    public void doGear(Gear gear, Shorty shorty) {
-        gear.useGear(shorty, 5);
+        this.geoHammer = geoHammer;
+        this.alpenShtock = alpenShtock;
+        this.iceChop = iceChop;
+        this.jetSneakers = jetSneakers;
+        this.weightLessNess = weightLessNess;
     }
 
     public void doGear(Gear gear, int t, Shorty... shortyes) {
@@ -83,12 +80,6 @@ public class Shorty extends HumanLike implements ClapAble, Cryable, Shoutable {
 
     @Override
     public String toString() {
-        return "Shorty{" +
-                "geoHammer=" + geoHammer +
-                ", alpenShtock=" + alpenShtock +
-                ", iceChop=" + iceChop +
-                ", jetSneakers=" + jetSneakers +
-                ", weightLessNess=" + weightLessNess +
-                '}';
+        return "Shorty{" + "geoHammer=" + geoHammer + ", alpenShtock=" + alpenShtock + ", iceChop=" + iceChop + ", jetSneakers=" + jetSneakers + ", weightLessNess=" + weightLessNess + '}';
     }
 }
